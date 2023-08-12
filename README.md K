@@ -1,15 +1,10 @@
-Open your welcome. yml file.
-Update the contents of the file to:
 name: Post welcome comment
-Click this to copy all the code! Then
+
 on:
-paste into your YAMLyml file
 pull_request:
 types: [opened]
+
 jobs:
-build: name: Post welcome comment runs-on: ubuntu-latest
-steps:
-env:
-- run: gh pr comment $PR_URL --body "Welcome to the repository!"
-GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}
-PR URL: $ff github. event.oull request.html url 77
+build:
+name: Post welcome comment
+runs-on: ubuntu-latest
